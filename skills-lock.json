@@ -11,6 +11,11 @@
       "sourceType": "local",
       "computedHash": "d96f95fd2f5c043c18919bfade7688fb0eb62a051b3be4ab98faa312fc2ee927"
     },
+    "artifacts-builder": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "8d69507435408416d8d8081517dddcf0a1e0e2bc8e0484863984b19ff8c6cd58"
+    },
     "ask-matt": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -27,6 +32,11 @@
       "sourceType": "local",
       "computedHash": "c5629242f72a17425456f684467a6fb7fb4a03f1fcfe1474e87aabad78ddae65"
     },
+    "brand-guidelines": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "4aa754f4f7fc54ac3e7f6e2fb55c0e2fb14b7d70da077b41a86bd1889ff9094c"
+    },
     "brandkit": {
       "source": "../leonxlnx/taste-skill",
       "sourceType": "local",
@@ -36,6 +46,11 @@
       "source": "../addyosmani/agent-skills",
       "sourceType": "local",
       "computedHash": "639950ea71851d9c4919608cba8b6276cd1ba30cd82acdc4949c701537eed661"
+    },
+    "canvas-design": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "a2fe47d24b3fd8e52faef731fff099c557e698083cd644b2e5695cc4dd8c7715"
     },
     "cavecrew": {
       "source": "../juliusbrussee/caveman",
@@ -107,6 +122,11 @@
       "sourceType": "local",
       "computedHash": "f59785c3571b4016fda470fef975adf48af2b29cac0df0ad43c8c8a8d1bd8f88"
     },
+    "changelog-generator": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "0facdb5c491a654e3b0f6d300fb8fa14472d811cb715c632dc2862919b277dae"
+    },
     "chief-of-staff": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -146,10 +166,30 @@
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
       "computedHash": "b2888e4f4e8c0af3bfd557575a64b905c44e6248c3101d72077816882b3a92b9"
     },
+    "competitive-ads-extractor": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "8367364ae0aefcf0554468308066e39dc81aeaccfcf9922f85de1b7f56ad61a8"
+    },
+    "connect": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "85aee775c70ddfba6873dc8dd79b0f957bcadc9c4454c9b5caedb8b6456a733c"
+    },
+    "connect-apps": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "46ff9090ad2709d097f07d621873fb96e8b77ef515d81d48bf532adebfd01d8d"
+    },
     "constraint-driven-development": {
       "source": "../addyosmani/agent-skills",
       "sourceType": "local",
       "computedHash": "7cdf20ff7d27eb3103b206033a1d87af7afe4a648162f09cd382fc8e3cb9a42b"
+    },
+    "content-research-writer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "de7e9085e875a651f209c826d1a5e7dd5f2436fb38fe565ef76b54492c1a0c22"
     },
     "context-engineering": {
       "source": "../addyosmani/agent-skills",
@@ -186,6 +226,11 @@
       "sourceType": "local",
       "computedHash": "d704ab912c4d0ca954ffa858983da755ae4cd5cad9ba22554db5557382f5bd34"
     },
+    "developer-growth-analysis": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "e3dcbe091bacd9f1afdac53319dea01aace1e50a9d8e64c21c859ab0a89765f5"
+    },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -203,10 +248,20 @@
       "skillPath": "skills/engineering/domain-modeling/SKILL.md",
       "computedHash": "b3eb40152b81f0c98fd2095a023c019452dbdce56f7540cc67fece2972db8369"
     },
+    "domain-name-brainstormer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "911dba9c4e55a47bebbf3d44482579518797a94d5bfc02088a9ed85360df6d2b"
+    },
     "doubt-driven-development": {
       "source": "../addyosmani/agent-skills",
       "sourceType": "local",
       "computedHash": "b13f18a68abf2a1fd0c30adeac9bec0ee551adec9f2a1dc2700f1a6e3eb48092"
+    },
+    "file-organizer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "1b03d0f0879230671fba161b92d732c9ae7e947bfe061cbf008d39fa9df1ed8b"
     },
     "frontend-design": {
       "source": "anthropics/skills",
@@ -274,6 +329,11 @@
       "sourceType": "local",
       "computedHash": "9fc0ae5d8a074872a636d22f9c6fe71e041b86cddc9fe5af90ef654f5032ec5d"
     },
+    "image-enhancer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "2fbd9f8dadf7de2e93844d0626a46f1096925ee78f41174f4c261604b39828ca"
+    },
     "image-to-code": {
       "source": "../leonxlnx/taste-skill",
       "sourceType": "local",
@@ -322,6 +382,11 @@
       "sourceType": "local",
       "computedHash": "8fc355c4aadb7d29c53ca28bc41be3cd6eea765d121e3737c4dc2d0f90a8effa"
     },
+    "internal-comms": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "b36b333bee983462008af46d74689ae5832c2f79ae5f2c18680ee82f6e6bef56"
+    },
     "interview-me": {
       "source": "../addyosmani/agent-skills",
       "sourceType": "local",
@@ -331,6 +396,21 @@
       "source": "../juliusbrussee/caveman",
       "sourceType": "local",
       "computedHash": "59b581b5abfc0e19b7dd5a7c3bb2b16621ab5e94e085065c7b724a9c86cc3d4d"
+    },
+    "invoice-organizer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "3981cc7b74330cb508ffd53e03664e94eb3413b9fbf9fd14a123774de15a8499"
+    },
+    "langsmith-fetch": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "7953660eee3f80ce985956e4ad2ed1f551efca6aad596b7f3479d5a829602180"
+    },
+    "lead-research-assistant": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "08cf5477dfdcbefa0758fad431c226efb9f09e108c8c6477b4a14db2d6810889"
     },
     "lean-build": {
       "source": "../juliusbrussee/caveman",
@@ -342,6 +422,16 @@
       "sourceType": "github",
       "skillPath": "skills/in-progress/loop-me/SKILL.md",
       "computedHash": "72e01a16929dbf6583afc469a49d64b28b1be4a6034c900decd94cd5a69ba6e6"
+    },
+    "mcp-builder": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "796e369a513fe27a0eb5461611dec6bf943da7992194ddec1291f4fa34fb28cb"
+    },
+    "meeting-insights-analyzer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "73d94649632b9b146bb9a745a31efcbc315a8916f14619a327f009b54d1be656"
     },
     "megacave": {
       "source": "../juliusbrussee/caveman",
@@ -395,6 +485,11 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/prototype/SKILL.md",
       "computedHash": "d3fc74689bd993e39c44bfae510d014eecffbeec2922764b065377fd1327c0f6"
+    },
+    "raffle-winner-picker": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "cd97da2fa280d9545b6f60dfc07335663af4932acb58d83d6801a1bb3b8a8aae"
     },
     "redesign-existing-projects": {
       "source": "../leonxlnx/taste-skill",
@@ -452,6 +547,21 @@
       "sourceType": "local",
       "computedHash": "d1997f520c069fcd351427a0e116b668ceba7b95facbc97c9ac75363d9febcfd"
     },
+    "skill-creator": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "6233fd26885f4e61c30c8282c885dc73a9feb2d2611ccb736d0cefc8899b678d"
+    },
+    "skill-share": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "09f71aa830cb200d355ff6103958d85ecd33121c4454e3b8c2d60b70c88e05cc"
+    },
+    "slack-gif-creator": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "6139cf556d1dd78b69c1dd84af43c132db391b6f31e67de38d1edb4551ba93e0"
+    },
     "slides": {
       "source": "../nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "local",
@@ -477,6 +587,11 @@
       "sourceType": "local",
       "computedHash": "028b9c3574142d19639d9f8eb11fbb01c58479f8f441e957d598a7215e79f95d"
     },
+    "tailored-resume-generator": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "37ad72564c908b09bcccc8a34087bef06b12b4c38dc68d76cddba5afc588bd92"
+    },
     "tdd": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -489,10 +604,20 @@
       "skillPath": "skills/productivity/teach/SKILL.md",
       "computedHash": "81c196426808c270a9d4688be291405c038bba11f020b9fe10098ad0f1d8c132"
     },
+    "template-skill": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "38c88f722b574a922311d334a70c2008a2a5b896f06eaa75516d716e5725b26f"
+    },
     "test-driven-development": {
       "source": "../addyosmani/agent-skills",
       "sourceType": "local",
       "computedHash": "efb654aa37612ab1e7470e547b06a322c5e1837b6879525e32aa432d1281692b"
+    },
+    "theme-factory": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "93e78aa44f8fa00bb2c0608f400de1e1dcd6494611dd8ea27c867654240c7bcd"
     },
     "to-questionnaire": {
       "source": "mattpocock/skills",
@@ -517,6 +642,11 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/triage/SKILL.md",
       "computedHash": "a683e69163e23630f39c05a50fb9d83a3795a6a6fbd317357669e082cd43a158"
+    },
+    "twitter-algorithm-optimizer": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "4dacb151d9267f390a2a1aa5ff06ea984c2270f6a188315dcb8a65cd0d4bcf34"
     },
     "ui-styling": {
       "source": "../nextlevelbuilder/ui-ux-pro-max-skill",
@@ -600,6 +730,11 @@
       "skillPath": "skills/engineering/wayfinder/SKILL.md",
       "computedHash": "71d1296ae9f1ea0397f385f72d11ca3473827f5d067df4d06c58eb03377a57ce"
     },
+    "webapp-testing": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "cf8e5916d474886bd67b09691247f43f331523008b7d366064bc607ab42d6302"
+    },
     "wizard": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -629,6 +764,11 @@
       "sourceType": "github",
       "skillPath": "skills/in-progress/writing-shape/SKILL.md",
       "computedHash": "0d0ac1150c4d65f8370ad194fc097ee17855247f6e5943d05f075806980e7401"
+    },
+    "youtube-downloader": {
+      "source": "../composiohq/awesome-claude-skills",
+      "sourceType": "local",
+      "computedHash": "3e4e2304770b72777cabb2b03fb94503adecc9917e9c02ba295dbce31b75d791"
     }
   }
 }
