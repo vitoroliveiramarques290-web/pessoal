@@ -523,6 +523,51 @@
       "sourceType": "local",
       "computedHash": "31175964fac224f2ebd07550d854b11b5ed869b47ddf42e6c8f92ec0c75141bd"
     },
+    "understand": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "19fa0ec225cab460f0657c5f118dc061658da600be08ea4bd6bd030dbe16416b"
+    },
+    "understand-chat": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "a514dcc798581cbe8fb34f94259419fb266cae3a39cb3f27fa4e1965fb91811e"
+    },
+    "understand-dashboard": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "5e3ac7994d20f16f8232164dbec7998b62073a5547fcfc0b0baba82cb48bed0a"
+    },
+    "understand-diff": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "b127ca3e87722fb713ef167120487d9ea2446d45257b9889ea46c953d8e82c07"
+    },
+    "understand-domain": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "23814b978901ed88ced3f7c887e6552dc4986dc587f188f92b18c72d1b047338"
+    },
+    "understand-explain": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "d2ca31d93c3c02069ece0783b4e955b42dc0f1d5959bf6749a015e40548d2859"
+    },
+    "understand-figma": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "488ebff9664f084069141cddaf16439aa420cfdb6df54403a83ecf3e237be958"
+    },
+    "understand-knowledge": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "34dff7e2cd79f61d73f07dc2b1f844ae158c11ffe6b088dcb0f9e018e908495c"
+    },
+    "understand-onboard": {
+      "source": "../egonex-ai/understand-anything",
+      "sourceType": "local",
+      "computedHash": "a6952f46c53767816ee447c23ac2b505ecb09cb2ce9c5c113b561d9e91e064d0"
+    },
     "using-agent-skills": {
       "source": "../addyosmani/agent-skills",
       "sourceType": "local",
