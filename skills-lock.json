@@ -6,6 +6,11 @@
       "sourceType": "local",
       "computedHash": "8bdbf1fca81bef9258d7e0d9726f933f25677ec8537792e084a3fb7c54acf2ba"
     },
+    "archify": {
+      "source": "../tt-a1i/archify",
+      "sourceType": "local",
+      "computedHash": "d96f95fd2f5c043c18919bfade7688fb0eb62a051b3be4ab98faa312fc2ee927"
+    },
     "ask-matt": {
       "source": "mattpocock/skills",
       "sourceType": "github",
