@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash",
+            "args": [
+              "-c",
+              "#!/bin/bash\nset -e\n\n# Token usage thresholds (10%, 20%, 30%, etc.)\nTHRESHOLDS=(10 20 30 40 50 60 70 80 90)\nTOKEN_TRACKER=\"${HOME}/.claude/projects/$(pwd | md5sum | cut -d' ' -f1)/token_tracker.json\"\nMARKER_DIR=\"${HOME}/.claude/token_markers\"\n\nmkdir -p \"$MARKER_DIR\" \"$(dirname \"$TOKEN_TRACKER\")\"\n\n# Try to estimate usage from session context\n# This is a simplified approach - actual implementation would need Claude Code integration\nif [ -f \"$TOKEN_TRACKER\" ]; then\n  CURRENT_USAGE=$(jq '.usage_percent // 0' \"$TOKEN_TRACKER\" 2>/dev/null || echo 0)\nelse\n  CURRENT_USAGE=0\n  echo '{\"usage_percent\": 0}' > \"$TOKEN_TRACKER\"\nfi\n\n# Check if we've crossed any thresholds\nfor threshold in \"${THRESHOLDS[@]}\"; do\n  marker_file=\"${MARKER_DIR}/.threshold_${threshold}\"\n  \n  if [ $CURRENT_USAGE -ge $threshold ] && [ ! -f \"$marker_file\" ]; then\n    echo \"{\\\"systemMessage\\\": \\\"⚠️  Token usage reached ${threshold}% of session budget\\\"}\" | jq -c .\n    touch \"$marker_file\"\n  fi\ndone\n"
+            ],
+            "statusMessage": "Checking token usage...",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
