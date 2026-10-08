@@ -289,6 +289,11 @@
       "sourceType": "local",
       "computedHash": "65f5ae59fa317567809438310b1c54f78cd133426deb43e4d3d4ca4c8f541628"
     },
+    "impeccable": {
+      "source": "../pbakaus/impeccable",
+      "sourceType": "local",
+      "computedHash": "bb4d6fad4900cfef09ddf05c41711b74ef9a1b2c3d4ef8b20743ec66aeadfb63"
+    },
     "implement": {
       "source": "mattpocock/skills",
       "sourceType": "github",
