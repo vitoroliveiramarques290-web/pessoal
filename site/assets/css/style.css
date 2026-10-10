@@ -62,7 +62,8 @@ p { margin: 0 0 1rem; }
   .nav { position: fixed; inset: calc(var(--header-h) + env(safe-area-inset-top, 0px)) 0 0 0; background: var(--deep); flex-direction: column; align-items: flex-start; gap: 0; padding: 1rem var(--gutter) 2rem; transform: translateY(-110%); visibility: hidden; transition: transform .3s, visibility .3s; overflow-y: auto; }
   .nav-open .nav { transform: none; visibility: visible; }
   .nav a { width: 100%; padding: 1rem 0; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
-  .site-header.solid, .nav-open .site-header { background: var(--deep); }
+  .site-header.solid, body:not(.page-home) .site-header, .nav-open .site-header { background: var(--deep); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  body.nav-open { overflow: hidden; }
 }
 
 body.page-home .site-header:not(.solid) { background: linear-gradient(rgba(10,7,3,.78), rgba(10,7,3,0)); }
