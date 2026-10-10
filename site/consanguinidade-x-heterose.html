@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Consanguinidade x Heterose | Legado Genética</title>
+<meta name="description" content="Simulador e placar que comparam consanguinidade planejada e heterose para uma grande fazenda Nelore, com fontes e marcadores de verificação.">
+<meta name="theme-color" content="#14110a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Consanguinidade x Heterose | Legado Genética">
+<meta property="og:description" content="Simulador e placar que comparam consanguinidade planejada e heterose para uma grande fazenda Nelore, com fontes e marcadores de verificação.">
+<meta property="og:image" content="assets/img/sede-ipe-entardecer.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&amp;family=DM+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="">
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="Legado Genética, início">Legado <i>Genética</i></a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+  </div>
+</header>
+<main id="conteudo">
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Debate técnico</p><h1>Consanguinidade ou <span class="accent">heterose</span>?</h1>
+    <p class="lead">Mexa nos números e veja o que cada caminho entrega. Esta página não esconde onde o cruzamento ganha: o argumento da Legado Genética aparece quando o objetivo da fazenda entra na conta.</p>
+    <div class="note"><b>Leia antes de citar.</b> Valores com <span class="dag">†</span> vieram de resumos de artigos e ainda não foram conferidos no texto original. Os marcados com <span class="ver">‡</span> foram conferidos no texto completo. O preço é de mercado público, não da fazenda. Nada aqui é resultado observado em rebanho real.</div></div>
+
+    <p class="eyebrow">Simulador</p>
+    <h2>Quilos por bezerro ao longo dos anos</h2>
+    <p class="lead">Compara um bezerro F1 (cruzamento, um ganho de nível) com um núcleo Nelore em seleção (ganho que acumula, menos o custo da endogamia).</p>
+    <div class="sim">
+      <form class="ctl" onsubmit="return false" aria-label="Premissas do simulador">
+        <label class="field" for="touros"><span class="row"><span>Touros no núcleo</span><output id="o-touros"></output></span><input id="touros" type="range" min="3" max="60" step="1" value="20"></label>
+        <label class="field" for="matrizes"><span class="row"><span>Matrizes no núcleo</span><output id="o-matrizes"></output></span><input id="matrizes" type="range" min="30" max="400" step="10" value="100"></label>
+        <label class="field" for="ger"><span class="row"><span>Intervalo entre gerações</span><output id="o-ger"></output></span><input id="ger" type="range" min="3" max="7" step="0.5" value="4.5"></label>
+        <label class="field" for="g"><span class="row"><span>Ganho genético por ano <span class="dag">†</span></span><output id="o-g"></output></span><input id="g" type="range" min="0.2" max="3.5" step="0.1" value="1"></label>
+        <label class="field" for="coef">Custo da endogamia por 1% de F
+          <select id="coef"><option value="0.38">0,38 kg (Nelore, Pereira 2015 ‡)</option><option value="0.44">0,44 kg (Burrow, corte †)</option><option value="1.33">1,33 kg (pior caso Nelore †)</option></select></label>
+        <label class="field" for="f1">Ganho do bezerro F1 no desmame
+          <select id="f1"><option value="12.2">+12,2 kg (heterose pura, PR †)</option><option value="18" selected>+18,0 kg (Embrapa, machos †)</option><option value="30.9">+30,9 kg (USP, inclui raça do touro †)</option></select></label>
+        <label class="field" for="preco"><span class="row"><span>Bezerro de 7@ em MT (R$/kg) <span class="dag">†</span></span><output id="o-preco"></output></span><input id="preco" type="range" min="10" max="22" step="0.01" value="16.86"></label>
+      </form>
+      <div class="out">
+        <div class="kpis">
+          <div class="kpi k-gold"><b id="k-df">–</b><span>endogamia nova por geração (ΔF)</span></div>
+          <div class="kpi k-gold"><b id="k-f10">–</b><span>F do núcleo em 10 anos</span></div>
+          <div class="kpi k-clay"><b id="k-f1">–</b><span>ganho do F1 por bezerro</span></div>
+          <div class="kpi k-moss"><b id="k-sel">–</b><span>ganho líquido do núcleo em 10 anos</span></div>
+        </div>
+        <div class="chart">
+          <svg id="svg" viewBox="0 0 640 340" role="img" aria-label="Gráfico: ganho do F1 contra ganho líquido do núcleo selecionado, por ano"></svg>
+          <div class="legend"><span><i style="background:var(--clay)"></i>Cruzamento F1 (nível, enquanto cruzar)</span><span><i style="background:var(--moss)"></i>Núcleo Nelore (seleção menos endogamia)</span><span><i style="background:var(--gold);height:2px"></i>Custo da endogamia</span></div>
+        </div>
+        <div class="read" id="read" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Placar por critério</p>
+    <h2>A fazenda real, critério a critério</h2>
+    <p class="lead">Grande fazenda Nelore em Mato Grosso, proprietária em São Paulo, preferência pelo Fumaça, Nelore convencional no plantel, fábrica de ração própria e zootecnista especializado. Rebanho, pedigree e produtividade ainda não são conhecidos.</p>
+    <div class="tablewrap"><table style="min-width:44rem">
+      <thead><tr><th>Critério</th><th>Consanguinidade planejada</th><th>Heterose</th><th>Ponto</th></tr></thead>
+      <tbody>
+        <tr><td>Objetivo: valorizar o Fumaça</td><td>Preserva e fixa a linhagem</td><td>Dilui o fenótipo na 1ª geração</td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Quilos no desmame, curto prazo</td><td>Perde 2 a 8 kg a F = 6,25% <span class="ver">‡</span><span class="dag">†</span></td><td>Ganha 12 a 31 kg <span class="dag">†</span></td><td class="w-h">Heterose</td></tr>
+        <tr><td>Permanência do ganho</td><td>Herdável, soma geração a geração</td><td>Cai a cerca de 50% em F2 <span class="dag">†</span> e exige raças puras</td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Ambiente (calor, carrapato)</td><td>Nelore adaptado</td><td>Taurino: tristeza parasitária <span class="ver">‡</span> e mais consumo <span class="dag">†</span></td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Gestão à distância</td><td>Um sistema, exige dados e laudos</td><td>Duas ou mais raças, IATF, reposição</td><td class="w-t">Depende</td></tr>
+        <tr><td>Risco biológico</td><td>Controlável com F e triagem; grave sem controle</td><td>Baixo</td><td class="w-h">Heterose</td></tr>
+        <tr><td>Qualidade de carcaça</td><td>Sem ganho de heterose</td><td>Área de olho de lombo +25,65% e carne mais macia (Angus x Nelore) <span class="ver">‡</span></td><td class="w-h">Heterose</td></tr>
+        <tr><td>Fábrica de ração</td><td>Mede GMD e CAR e seleciona eficiência</td><td>Cruzadas pedem dieta de maior consumo <span class="dag">†</span></td><td class="w-c">Leve: consanguinidade</td></tr>
+        <tr><td>Mercado</td><td>Leilões de touros Nelore (média de R$ 13,8 mil <span class="dag">†</span>); ágio do Fumaça não encontrado</td><td>Bonificação existe, concentrada em castrados <span class="dag">†</span></td><td class="w-t">Indefinido</td></tr>
+      </tbody></table></div>
+    <div class="note gold">Placar: consanguinidade leva 4 critérios, heterose leva 3, e 2 ficam em aberto. O placar não é o argumento: os pesos mudam com o objetivo da cliente.</div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">O ponto central</p>
+    <h2>Por que cruzar acaba com o <span class="accent">Fumaça</span></h2>
+    <p class="lead">Pelo modelo didático do dossiê, A é o alelo do Nelore convencional (dominante) e a é o alelo recessivo do Fumaça. É uma hipótese de aula, não uma prova de que a pelagem real dependa de um único gene.</p>
+    <div class="grid g2" style="max-width:34rem">
+      <label class="field" for="mae">Mãe<select id="mae"><option value="aa">aa (Fumaça)</option><option value="Aa">Aa (portadora)</option><option value="AA">AA (convencional)</option></select></label>
+      <label class="field" for="pai">Pai<select id="pai"><option value="aa">aa (Fumaça)</option><option value="Aa">Aa (portador)</option><option value="AA" selected>AA (outra raça ou convencional)</option></select></label>
+    </div>
+    <div class="bars" id="bars" aria-live="polite" style="max-width:34rem"></div>
+    <p id="gen-note" style="color:var(--soft);margin-top:.8rem"></p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Dados conferidos no texto completo</p>
+    <h2>O que já está <span class="accent">verificado</span></h2>
+    <div class="tablewrap"><table style="min-width:40rem"><thead><tr><th>Dado</th><th>Valor <span class="ver">‡</span></th><th>Fonte</th></tr></thead><tbody>
+      <tr><td>Custo da endogamia no peso à desmama (210 d), por 1% de F</td><td>−0,38 kg (IC 95%: −0,40 a −0,36); materno −0,16 kg</td><td>Pereira et al. 2015, 892.199 Nelore (ABCZ/UFMT/Embrapa)</td></tr>
+      <tr><td>Idade ao primeiro parto, por 1% de F</td><td>+1,43 dia (IC 95%: 1,27 a 1,60)</td><td>Pereira et al. 2015, 831.766 Nelore</td></tr>
+      <tr><td>Peso ao sobreano e ganho desmama-sobreano, por 1% de F</td><td>−1,00 kg e −2,02 g/dia</td><td>Pereira et al. 2015</td></tr>
+      <tr><td>F médio do Nelore do estudo</td><td>cerca de 3%; 96,71% dos animais endogâmicos, só 0,29% com F acima de 25%</td><td>Pereira et al. 2015</td></tr>
+      <tr><td>Heterose individual no peso aos 270 dias, Marchigiana x Nelore</td><td>+16,2 ± 4,9 kg; Canchim x Nelore: −6,9 ± 6,8 kg (não significativa)</td><td>Alencar et al., Embrapa Pecuária Sudeste, 962 bezerros em MS</td></tr>
+      <tr><td>Carcaça Angus x Nelore (55 novilhos)</td><td>Área de olho de lombo +25,65%; carne mais macia (força de cisalhamento −13,46%)</td><td>Teixeira et al. 2012, Embrapa/UFPel</td></tr>
+      <tr><td>Tristeza parasitária</td><td>Limitante principalmente em rebanhos taurinos ou com alta porcentagem de sangue taurino</td><td>Embrapa, Circular Técnica 48</td></tr>
+      <tr><td>Rebanho brasileiro</td><td>Cerca de 80% é zebu ou tem alguma mestiçagem de zebu</td><td>Alencar, Embrapa, "Cruzamento em gado de corte"</td></tr>
+    </tbody></table></div>
+    <p>Os demais números (por exemplo, o +30,9 kg do bezerro F1 da USP) ainda estão a conferir. A lista completa e os links estão em <a href="fontes.html">Fontes</a>, e o <a href="assets/docs/Legado_Genetica_Anexo_Analitico_Consanguinidade_x_Heterose.pdf">anexo analítico em PDF</a> traz o modelo de cálculo.</p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Recomendação</p>
+    <h2>Consanguinidade como programa principal, heterose como apoio</h2>
+    <div class="grid g3">
+      <article class="card"><h3>Núcleo Fumaça</h3><p>Consanguinidade planejada, nunca cruzar. Pelo menos 20 touros por 100 matrizes como ponto de partida. F máximo e triagem de haplótipos deletérios definidos pelo geneticista.</p></article>
+      <article class="card"><h3>Lote comercial</h3><p>Se o zootecnista aprovar, cruzamento industrial só aqui. Reposição de matrizes e adaptação ao cerrado entram na conta.</p></article>
+      <article class="card"><h3>Quando a heterose vence</h3><p>Se o único objetivo for quilo de bezerro ou de boi no curto prazo. Nesse caso o programa entra só nas matrizes que geram as fêmeas.</p></article>
+    </div>
+    <p style="margin-top:1.2rem"><a class="btn" href="diagnostico.html">Fazer o diagnóstico da minha fazenda</a></p>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="index.html">Legado <i>Genética</i></a>
+    <nav class="foot-nav" aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+    <p>Projeto acadêmico de simulação (APS de Agronomia). Empresa, produtos e dados de demonstração.</p>
+    <p>Imagens geradas por IA para fins ilustrativos. Não representam animais ou instalações reais.</p>
+    <p>Preservamos a origem. Planejamos o futuro.</p>
+  </div>
+</footer>
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/comparador.js" defer></script>
+
+</body>
+</html>

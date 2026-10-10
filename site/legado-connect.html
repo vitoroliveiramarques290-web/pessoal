@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Legado Connect | Legado Genética</title>
+<meta name="description" content="Protótipo clicável do painel Legado Connect, com dados simulados: inventário, genética, reprodução, nutrição e visão executiva.">
+<meta name="theme-color" content="#14110a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legado Connect | Legado Genética">
+<meta property="og:description" content="Protótipo clicável do painel Legado Connect, com dados simulados: inventário, genética, reprodução, nutrição e visão executiva.">
+<meta property="og:image" content="assets/img/sede-ipe-entardecer.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&amp;family=DM+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="">
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="Legado Genética, início">Legado <i>Genética</i></a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+  </div>
+</header>
+<main id="conteudo">
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Legado Connect</p><h1>A fazenda no <span class="accent">seu celular</span>.</h1>
+    <p class="lead">Protótipo clicável do painel para a proprietária que acompanha a fazenda de São Paulo. Inventário, genética, reprodução, nutrição e visão executiva em um lugar.</p></div>
+    <div class="sim-banner"><b>Dados simulados</b> Esta tela é uma demonstração. Não mostra laudos, autenticação nem integrações reais, e os animais abaixo são exemplos fictícios.</div>
+    <div role="tablist" class="tabs" aria-label="Módulos do painel">
+      <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Inventário</button>
+      <button role="tab" id="t2" aria-controls="p2" aria-selected="false">Genética</button>
+      <button role="tab" id="t3" aria-controls="p3" aria-selected="false">Reprodução</button>
+      <button role="tab" id="t4" aria-controls="p4" aria-selected="false">Nutrição</button>
+      <button role="tab" id="t5" aria-controls="p5" aria-selected="false">Executivo</button>
+    </div>
+
+    <div role="tabpanel" id="p1" aria-labelledby="t1">
+      <div class="kpis"><div class="kpi k-ink"><b>8</b><span>animais no exemplo</span></div><div class="kpi k-moss"><b>4 de 8</b><span>com genealogia registrada</span></div><div class="kpi k-gold"><b>3 de 8</b><span>com amostra de DNA planejada</span></div></div>
+      <label class="field" for="filtro" style="max-width:22rem;margin-top:1rem">Filtrar<input id="filtro" type="search" placeholder="Digite um código, grupo ou ação"></label>
+      <div class="tablewrap"><table id="inv" style="min-width:48rem"><thead><tr><th>ID</th><th>Grupo / pelagem</th><th>Sexo</th><th>Categoria</th><th>Pai e mãe</th><th>Genotipagem</th><th>Próxima ação</th></tr></thead><tbody><tr><td>FUM-001</td><td>Fumaça (classificação visual)</td><td>Fêmea</td><td>Matriz</td><td>Em verificação</td><td>Não realizada</td><td>Validar pedigree e definir amostragem</td></tr><tr><td>FUM-002</td><td>Fumaça (classificação visual)</td><td>Fêmea</td><td>Matriz</td><td>Registrado</td><td>Amostra planejada</td><td>Coletar amostra</td></tr><tr><td>FUM-003</td><td>Fumaça (classificação visual)</td><td>Fêmea</td><td>Novilha</td><td>Em verificação</td><td>Não realizada</td><td>Validar pedigree</td></tr><tr><td>FUM-004</td><td>Fumaça (classificação visual)</td><td>Macho</td><td>Reprodutor</td><td>Registrado</td><td>Amostra planejada</td><td>Exame andrológico e coleta</td></tr><tr><td>FUM-005</td><td>Fumaça (classificação visual)</td><td>Fêmea</td><td>Matriz</td><td>Em verificação</td><td>Não realizada</td><td>Validar pedigree</td></tr><tr><td>CONV-001</td><td>Convencional</td><td>Fêmea</td><td>Matriz</td><td>Registrado</td><td>Não realizada</td><td>Triagem no GeneBank</td></tr><tr><td>CONV-002</td><td>Convencional</td><td>Macho</td><td>Reprodutor</td><td>Registrado</td><td>Amostra planejada</td><td>Avaliar como portador provável</td></tr><tr><td>CONV-003</td><td>Convencional</td><td>Fêmea</td><td>Matriz</td><td>Em verificação</td><td>Não realizada</td><td>Validar pedigree</td></tr></tbody></table></div>
+    </div>
+
+    <div role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <h2>Passaporte genético <span class="accent">(exemplo)</span></h2>
+      <div class="passport"><dl>
+        <dt>Identificação</dt><dd>FUM-001 | fêmea | Nelore | cadastro fictício</dd>
+        <dt>Pelagem registrada</dt><dd>Fumaça (classificação visual, não validada por DNA)</dd>
+        <dt>Pai e mãe</dt><dd>Em verificação</dd>
+        <dt>Genotipagem</dt><dd>Não realizada</dd>
+        <dt>Parentesco genômico</dt><dd>Não calculável sem laudos</dd>
+        <dt>DEPs e desempenho</dt><dd>Aguardando registros comparáveis</dd>
+        <dt>Próxima ação</dt><dd>Validar pedigree e definir amostragem</dd>
+      </dl></div>
+      <h3 style="margin-top:1.4rem">Alertas de exemplo</h3>
+      <ul><li>Sem cadastro validado, o sistema não recomenda acasalamento.</li><li>Sem genótipo confirmado, exibe probabilidade condicional e nunca certeza.</li><li>Com parentesco calculável, emite alerta para endogamia elevada, sem limite arbitrário universal.</li></ul>
+    </div>
+
+    <div role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div class="tablewrap"><table><thead><tr><th>Matriz</th><th>Reprodutor</th><th>Hipótese de pelagem</th><th>Parentesco esperado</th><th>Decisão</th></tr></thead><tbody>
+        <tr><td>FUM-001</td><td>REP-101</td><td>aa x aa</td><td>Dados pendentes</td><td><span class="chip warn">Revisar</span></td></tr>
+        <tr><td>FUM-002</td><td>REP-102</td><td>aa x Aa</td><td>Dados pendentes</td><td><span class="chip warn">Revisar</span></td></tr>
+        <tr><td>FUM-003</td><td>REP-103</td><td>Sem genótipo confirmado</td><td>Dados pendentes</td><td><span class="chip bad">Aguardar</span></td></tr>
+      </tbody></table></div>
+      <p class="muted">Calendário de protocolos, monta controlada, IA e TE/FIV só aparecem depois da aprovação do zootecnista e do veterinário.</p>
+    </div>
+
+    <div role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div class="tablewrap"><table><thead><tr><th>Indicador</th><th>Como medir</th><th>Status</th></tr></thead><tbody>
+        <tr><td>Ganho médio diário (GMD)</td><td>Pesagens padronizadas por período</td><td><span class="chip warn">A medir</span></td></tr>
+        <tr><td>Consumo individual</td><td>Cochos eletrônicos ou mensuração individual confiável</td><td><span class="chip warn">A medir</span></td></tr>
+        <tr><td>Consumo alimentar residual (CAR)</td><td>Consumo observado ajustado a manutenção e ganho</td><td><span class="chip warn">A medir</span></td></tr>
+        <tr><td>Custo alimentar por kg de ganho</td><td>Custo da dieta e ganho por animal ou lote</td><td><span class="chip warn">A medir</span></td></tr>
+      </tbody></table></div>
+      <p class="muted">A fábrica própria é um diferencial operacional, mas não comprova sozinha a eficiência alimentar individual.</p>
+    </div>
+
+    <div role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+      <div class="grid g3">
+        <article class="card"><h3>Decisões pendentes</h3><p>Validar pedigree dos animais Fumaça. Aprovar a amostragem para genotipagem. Definir o número de touros do núcleo.</p></article>
+        <article class="card"><h3>Próximo marco</h3><p>Dias 31 a 60: testes contratados e mapa genético. Dias 61 a 90: plano de acasalamentos aprovado.</p></article>
+        <article class="card"><h3>Relatório executivo</h3><p>Resumo da evolução, decisões pendentes e riscos, em linguagem simples para a proprietária.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="index.html">Legado <i>Genética</i></a>
+    <nav class="foot-nav" aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+    <p>Projeto acadêmico de simulação (APS de Agronomia). Empresa, produtos e dados de demonstração.</p>
+    <p>Imagens geradas por IA para fins ilustrativos. Não representam animais ou instalações reais.</p>
+    <p>Preservamos a origem. Planejamos o futuro.</p>
+  </div>
+</footer>
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/connect.js" defer></script>
+
+</body>
+</html>

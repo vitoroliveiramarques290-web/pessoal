@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diagnóstico de consanguinidade | Legado Genética</title>
+<meta name="description" content="Triagem que aponta a melhor opção de consanguinidade planejada para o perfil da sua fazenda, com risco de endogamia e próximos passos.">
+<meta name="theme-color" content="#14110a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diagnóstico de consanguinidade | Legado Genética">
+<meta property="og:description" content="Triagem que aponta a melhor opção de consanguinidade planejada para o perfil da sua fazenda, com risco de endogamia e próximos passos.">
+<meta property="og:image" content="assets/img/sede-ipe-entardecer.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&amp;family=DM+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="">
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="Legado Genética, início">Legado <i>Genética</i></a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+  </div>
+</header>
+<main id="conteudo">
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Diagnóstico</p><h1>Qual estratégia de consanguinidade serve à sua <span class="accent">fazenda</span>?</h1>
+    <p class="lead">Responda sobre o seu objetivo, o plantel e os dados que você tem. O diagnóstico aponta a melhor opção de consanguinidade planejada para esse perfil, calcula o risco de endogamia e diz o que falta coletar.</p>
+    <div class="note">Triagem orientativa por regras do grupo. Não substitui a avaliação do zootecnista e do geneticista. Nenhum dado é enviado a ninguém: o resultado fica na sua tela, e você pode copiar ou baixar.</div></div>
+    <div class="diag">
+      <form id="diag-form" class="panelbox grid" style="gap:1rem" novalidate>
+        <fieldset><legend>Objetivo principal</legend><div class="radios">
+          <label><input type="radio" name="objetivo" value="fumaca" checked> Fixar e valorizar o Fumaça</label>
+          <label><input type="radio" name="objetivo" value="reprodutores"> Formar e vender reprodutores</label>
+          <label><input type="radio" name="objetivo" value="comercial"> Produzir bezerro ou boi gordo</label>
+        </div></fieldset>
+        <label class="field" for="matrizes">Matrizes no plantel<input id="matrizes" name="matrizes" type="number" inputmode="numeric" min="1" max="20000" value="120"></label>
+        <label class="field" for="touros">Touros em uso por estação<input id="touros" name="touros" type="number" inputmode="numeric" min="1" max="500" value="6"></label>
+        <label class="field" for="fumaca">Animais Fumaça no plantel<input id="fumaca" name="fumaca" type="number" inputmode="numeric" min="0" max="20000" value="25"><span class="hint">Classificação visual, ainda sem confirmação por DNA.</span></label>
+        <label class="field" for="genealogia">Genealogia (pai e mãe)<select id="genealogia" name="genealogia"><option value="completa">Completa</option><option value="parcial" selected>Parcial</option><option value="nenhuma">Não há</option></select></label>
+        <label class="field" for="genotipagem">Genotipagem<select id="genotipagem" name="genotipagem"><option value="sim">Sim</option><option value="parcial">Parcial</option><option value="nao" selected>Não</option></select></label>
+        <label class="field" for="desempenho">Registros de peso e prenhez<select id="desempenho" name="desempenho"><option value="sim">Sim</option><option value="parcial" selected>Parcial</option><option value="nao">Não</option></select></label>
+        <label class="field" for="racao">Fábrica de ração registra dieta e consumo por lote<select id="racao" name="racao"><option value="sim" selected>Sim</option><option value="nao">Não</option></select></label>
+        <label class="field" for="fmedio">F médio já conhecido (%), se houver<input id="fmedio" name="fmedio" type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="Deixe em branco se não souber"></label>
+        <div class="actions"><button class="btn" type="submit">Gerar diagnóstico</button><button class="btn ghost" type="button" id="b-example">Ver exemplo</button></div>
+      </form>
+      <div id="result" class="result" aria-live="polite">
+        <div class="panelbox"><h3>O resultado aparece aqui</h3><p class="muted">Preencha o perfil e toque em "Gerar diagnóstico". Você recebe a estratégia indicada, o risco de endogamia, os alertas, o pacote sugerido e a lista do que falta coletar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="index.html">Legado <i>Genética</i></a>
+    <nav class="foot-nav" aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+    <p>Projeto acadêmico de simulação (APS de Agronomia). Empresa, produtos e dados de demonstração.</p>
+    <p>Imagens geradas por IA para fins ilustrativos. Não representam animais ou instalações reais.</p>
+    <p>Preservamos a origem. Planejamos o futuro.</p>
+  </div>
+</footer>
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/diagnostico.js" defer></script>
+
+</body>
+</html>
