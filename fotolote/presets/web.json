@@ -1,0 +1,8 @@
+{
+  "operations": [
+    {"op": "resize", "max_side": 1600},
+    {"op": "autocontrast", "cutoff": 0.5},
+    {"op": "sharpness", "factor": 1.2}
+  ],
+  "output": {"format": "webp", "quality": 82, "suffix": "_web"}
+}

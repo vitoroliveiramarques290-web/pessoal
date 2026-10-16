@@ -1,0 +1,7 @@
+{
+  "operations": [
+    {"op": "resize", "max_side": 2000},
+    {"op": "watermark", "text": "© Seu Nome", "position": "bottom-right", "opacity": 0.55}
+  ],
+  "output": {"format": "jpg", "quality": 88, "suffix": "_wm"}
+}
