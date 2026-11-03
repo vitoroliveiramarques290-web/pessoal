@@ -1,6 +1,6 @@
 # Workflows RunningHub — imagem/vídeo com modelo de referência + sites
 
-Cinco workflows ComfyUI (formato API) feitos só com **nodes nativos do ComfyUI**, para evitar custom nodes que talvez não existam no RunningHub.
+Um workflow completo (00) e cinco workflows separados (01 a 05) em ComfyUI (formato API) feitos só com **nodes nativos do ComfyUI**, para evitar custom nodes que talvez não existam no RunningHub.
 
 | Arquivo | O que faz |
 | --- | --- |
@@ -11,6 +11,23 @@ Cinco workflows ComfyUI (formato API) feitos só com **nodes nativos do ComfyUI*
 | `05_wan22_animate_meu_personagem_no_video_de_referencia.api.json` | **Wan 2.2 Animate**: a sua imagem de personagem faz o movimento e as expressões de um **vídeo de referência** (modo "move"). |
 
 > **Não foram testados no RunningHub.** Foram montados à mão a partir dos templates oficiais do ComfyUI e os links entre nodes e os nomes de todos os campos foram conferidos por script contra o código-fonte do ComfyUI (e do `comfyui_controlnet_aux`, no caso do DWPose), mas não rodei no site. Veja "Se der erro" abaixo.
+
+## ★ Workflow único: `00_COMPLETO_imagem_animate_e_loop_site.api.json`
+
+Tudo em um só grafo (46 nodes), com **3 saídas**:
+
+1. **Imagem** (`15`): sua foto + modelo de referência → imagem com o seu rosto na pose/roupa/cenário da referência.
+2. **Vídeo Animate** (`33`): essa imagem faz o movimento e as expressões de um vídeo de referência (Wan 2.2 Animate).
+3. **Vídeo loop para site** (`46`): essa imagem vira um vídeo de 1280x720 em loop sem emenda (Wan 2.2 FLF2V).
+
+Campos:
+- `4` LoadImage: **sua foto**. `5` LoadImage: **modelo de referência**. `8` prompt da imagem. `13` KSampler da imagem (`seed`, `steps`, `cfg`).
+- `23` LoadVideo: **vídeo de movimento** (converta para 16 fps, veja o ffmpeg na seção 05). `27` prompt do Animate. `28` `width`, `height`, `length` (832x480, 77 quadros).
+- `40` prompt do loop. `41` `width`, `height`, `length` (1280x720, 81 quadros).
+
+**Escolha o que rodar.** O ComfyUI só executa as saídas ativas. Para economizar tempo e GPU, desative as que não quer com **Ctrl+M** (mute) no node de saída: `33` (Animate) e/ou `46` (loop). Com os dois desativados, só a imagem é gerada, o que é bom para aprovar o rosto antes de gastar GPU com vídeo. Um grafo com tudo ativo carrega 4 modelos grandes em sequência (Qwen, Animate e Wan I2V alto/baixo ruído), então é o mais lento e o que mais pede VRAM.
+
+Vantagem: o vídeo usa a imagem gerada no mesmo run. Desvantagem: se o rosto não ficar bom, os vídeos saem ruins; por isso rode primeiro só a imagem.
 
 ## Como usar no RunningHub
 

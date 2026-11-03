@@ -1,0 +1,739 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": {
+      "title": "Modelo Qwen Image Edit 2509"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIP Qwen VL"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "_meta": {
+      "title": "VAE Qwen"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "minha_foto.png"
+    },
+    "_meta": {
+      "title": "INPUT - Minha foto"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "modelo_referencia.png"
+    },
+    "_meta": {
+      "title": "INPUT - Modelo de referencia"
+    }
+  },
+  "6": {
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "4",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "megapixels": 1.0
+    },
+    "_meta": {
+      "title": "Escala minha foto"
+    }
+  },
+  "7": {
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "5",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "megapixels": 1.0
+    },
+    "_meta": {
+      "title": "Escala referencia"
+    }
+  },
+  "8": {
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "Picture 1 is the real person (my photo). Picture 2 is the reference model. Create a new photo of the person from Picture 1, keeping their exact face, skin tone, hair and identity, in the same pose, outfit, camera framing, lighting and background as Picture 2. Photorealistic, natural skin texture, sharp details.",
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "6",
+        0
+      ],
+      "image2": [
+        "7",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "INPUT - Prompt imagem"
+    }
+  },
+  "9": {
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "",
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "6",
+        0
+      ],
+      "image2": [
+        "7",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Negativo imagem"
+    }
+  },
+  "10": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Latente (tamanho da referencia)"
+    }
+  },
+  "11": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift": 3.0
+    },
+    "_meta": {
+      "title": "Shift"
+    }
+  },
+  "12": {
+    "class_type": "CFGNorm",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ],
+      "strength": 1.0
+    },
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "13": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "seed": 123456,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ],
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "KSampler imagem"
+    }
+  },
+  "14": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Decode imagem"
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "14",
+        0
+      ],
+      "filename_prefix": "rh_imagem"
+    },
+    "_meta": {
+      "title": "OUTPUT - Imagem"
+    }
+  },
+  "16": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIP umt5"
+    }
+  },
+  "17": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "_meta": {
+      "title": "VAE Wan"
+    }
+  },
+  "18": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "16",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Negativo Wan"
+    }
+  },
+  "19": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2_animate_14B_bf16.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Modelo Animate 14B"
+    }
+  },
+  "20": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "lora_name": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+      "strength_model": 1.0
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] LoRA lightx2v"
+    }
+  },
+  "21": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "20",
+        0
+      ],
+      "shift": 5.0
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Shift"
+    }
+  },
+  "22": {
+    "class_type": "CLIPVisionLoader",
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] CLIP Vision"
+    }
+  },
+  "23": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "video_referencia.mp4"
+    },
+    "_meta": {
+      "title": "INPUT 3 - Video de movimento (referencia)"
+    }
+  },
+  "24": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": [
+        "23",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Frames"
+    }
+  },
+  "25": {
+    "class_type": "CLIPVisionEncode",
+    "inputs": {
+      "clip_vision": [
+        "22",
+        0
+      ],
+      "image": [
+        "14",
+        0
+      ],
+      "crop": "none"
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] CLIP Vision encode"
+    }
+  },
+  "26": {
+    "class_type": "DWPreprocessor",
+    "inputs": {
+      "image": [
+        "24",
+        0
+      ],
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 512,
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "scale_stick_for_xinsr_cn": "disable"
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Pose DWPose"
+    }
+  },
+  "27": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "A person performing the motion from the video, natural facial expressions, realistic, high quality, sharp details.",
+      "clip": [
+        "16",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "INPUT 4 - Prompt animate"
+    }
+  },
+  "28": {
+    "class_type": "WanAnimateToVideo",
+    "inputs": {
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "18",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ],
+      "width": 832,
+      "height": 480,
+      "length": 77,
+      "batch_size": 1,
+      "clip_vision_output": [
+        "25",
+        0
+      ],
+      "reference_image": [
+        "14",
+        0
+      ],
+      "face_video": [
+        "24",
+        0
+      ],
+      "pose_video": [
+        "26",
+        0
+      ],
+      "continue_motion_max_frames": 5,
+      "video_frame_offset": 0
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Wan Animate"
+    }
+  },
+  "29": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "21",
+        0
+      ],
+      "seed": 123456,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "28",
+        0
+      ],
+      "negative": [
+        "28",
+        1
+      ],
+      "latent_image": [
+        "28",
+        2
+      ],
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] KSampler"
+    }
+  },
+  "30": {
+    "class_type": "TrimVideoLatent",
+    "inputs": {
+      "samples": [
+        "29",
+        0
+      ],
+      "trim_amount": [
+        "28",
+        3
+      ]
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Cortar latente ref"
+    }
+  },
+  "31": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "30",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Decode"
+    }
+  },
+  "32": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "31",
+        0
+      ],
+      "fps": 16.0
+    },
+    "_meta": {
+      "title": "[2 ANIMATE] Montar video 16fps"
+    }
+  },
+  "33": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "32",
+        0
+      ],
+      "filename_prefix": "rh_animate",
+      "format": "auto",
+      "codec": "auto"
+    },
+    "_meta": {
+      "title": "OUTPUT 2 - Video animate"
+    }
+  },
+  "34": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": {
+      "title": "[3 SITE] Wan high noise"
+    }
+  },
+  "35": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": {
+      "title": "[3 SITE] Wan low noise"
+    }
+  },
+  "36": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "34",
+        0
+      ],
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0
+    },
+    "_meta": {
+      "title": "[3 SITE] LoRA 4 passos high"
+    }
+  },
+  "37": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "35",
+        0
+      ],
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0
+    },
+    "_meta": {
+      "title": "[3 SITE] LoRA 4 passos low"
+    }
+  },
+  "38": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "36",
+        0
+      ],
+      "shift": 5.0
+    },
+    "_meta": {
+      "title": "[3 SITE] Shift high"
+    }
+  },
+  "39": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "37",
+        0
+      ],
+      "shift": 5.0
+    },
+    "_meta": {
+      "title": "[3 SITE] Shift low"
+    }
+  },
+  "40": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Seamless looping motion, very slow gentle camera drift, soft ambient light shifting, elegant website hero background, smooth and continuous, no cuts, no text.",
+      "clip": [
+        "16",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "INPUT 5 - Prompt loop site"
+    }
+  },
+  "41": {
+    "class_type": "WanFirstLastFrameToVideo",
+    "inputs": {
+      "positive": [
+        "40",
+        0
+      ],
+      "negative": [
+        "18",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ],
+      "width": 1280,
+      "height": 720,
+      "length": 81,
+      "batch_size": 1,
+      "start_image": [
+        "14",
+        0
+      ],
+      "end_image": [
+        "14",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "[3 SITE] Wan loop (inicio=fim)"
+    }
+  },
+  "42": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "38",
+        0
+      ],
+      "add_noise": "enable",
+      "noise_seed": 123456,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "41",
+        0
+      ],
+      "negative": [
+        "41",
+        1
+      ],
+      "latent_image": [
+        "41",
+        2
+      ],
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable"
+    },
+    "_meta": {
+      "title": "[3 SITE] KSampler alto ruido"
+    }
+  },
+  "43": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "39",
+        0
+      ],
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "41",
+        0
+      ],
+      "negative": [
+        "41",
+        1
+      ],
+      "latent_image": [
+        "42",
+        0
+      ],
+      "start_at_step": 2,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable"
+    },
+    "_meta": {
+      "title": "[3 SITE] KSampler baixo ruido"
+    }
+  },
+  "44": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "43",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "[3 SITE] Decode"
+    }
+  },
+  "45": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "44",
+        0
+      ],
+      "fps": 16.0
+    },
+    "_meta": {
+      "title": "[3 SITE] Montar video 16fps"
+    }
+  },
+  "46": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "45",
+        0
+      ],
+      "filename_prefix": "rh_site_loop",
+      "format": "auto",
+      "codec": "auto"
+    },
+    "_meta": {
+      "title": "OUTPUT 3 - Video loop site"
+    }
+  }
+}
