@@ -2,5 +2,15 @@
   "cleanUrls": false,
   "headers": [
     { "source": "/assets/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=86400" } ] }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/produtos.html", "destination": "/#proposta", "permanent": true },
+    { "source": "/jornada.html", "destination": "/#proposta", "permanent": true },
+    { "source": "/consanguinidade-x-heterose.html", "destination": "/#simulador", "permanent": true },
+    { "source": "/diagnostico.html", "destination": "/#diagnostico", "permanent": true },
+    { "source": "/legado-connect.html", "destination": "/#proposta", "permanent": true },
+    { "source": "/fontes.html", "destination": "/#fontes", "permanent": true },
+    { "source": "/roteiro-debate.html", "destination": "/#debate", "permanent": true }
   ]
 }

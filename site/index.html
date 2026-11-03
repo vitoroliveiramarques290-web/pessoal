@@ -3,116 +3,330 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Legado Genética | Programa Fumaça 360</title>
-<meta name="description" content="Consanguinidade planejada e tecnologia genética para quem cria Nelore: o Programa Fumaça 360, em uma abertura com scroll.">
+<title>Berdinazi &amp; Mezenga | Leite de custo baixo, genética que se acumula</title>
+<meta name="description" content="Fazenda leiteira em Uberlândia (MG), rebanho PO. Simulador e debate entre consanguinidade planejada e heterose (Holandês x Gir). Projeto acadêmico de simulação.">
 <meta name="theme-color" content="#14110a">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Legado Genética | Programa Fumaça 360">
-<meta property="og:description" content="Consanguinidade planejada e tecnologia genética para quem cria Nelore: o Programa Fumaça 360, em uma abertura com scroll.">
-<meta property="og:image" content="assets/img/sede-ipe-entardecer.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="Berdinazi &amp; Mezenga">
+<meta property="og:description" content="Leite de custo baixo, genética que se acumula. Simulador e debate: consanguinidade planejada x heterose.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&amp;family=DM+Sans:wght@400;500;600&amp;display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="page-home">
+<body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<div class="progress" aria-hidden="true"><i></i></div>
 <header class="site-header">
   <div class="wrap header-in">
-    <a class="brand" href="index.html" aria-label="Legado Genética, início">Legado <i>Genética</i></a>
+    <a class="brand" href="#abertura" aria-label="Berdinazi &amp; Mezenga, início"><span class="logo-slot" id="logo-slot" aria-hidden="true"></span><span>Berdinazi <i>&amp;</i> Mezenga</span></a>
     <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
-    <nav class="nav" id="nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
+    <nav class="nav" id="nav" aria-label="Seções da página"><a href="#tese">Tese</a><a href="#rebanho">Rebanho</a><a href="#simulador">Simulador</a><a href="#graficos">Gráficos</a><a href="#placar">Placar</a><a href="#lacunas">Lacunas</a><a href="#debate">Debate</a><a href="#proposta">Proposta</a><a href="#diagnostico">Diagnóstico</a><a href="#fontes">Fontes</a></nav>
   </div>
 </header>
 <main id="conteudo">
 
-<div class="story-track" id="story-track">
-  <div class="stage">
-    <img class="layer" src="assets/img/pasto-aereo.jpg" alt="Vaca Nelore branca pastando sozinha, vista aérea de um pasto dourado ao fim da tarde, com anéis de vento no capim" width="1080" height="1446" decoding="async" fetchpriority="high">
-    <img class="layer" src="assets/img/vaca-nivel-olho.jpg" alt="Vaca Nelore olhando para a câmera, com o sol baixo atrás dela e o pasto dourado ao fundo" width="1080" height="1446" decoding="async" >
-    <img class="layer" src="assets/img/sede-ipe-entardecer.jpg" alt="Casa de fazenda branca com telhado colonial e um ipê amarelo ao pôr do sol, com uma vaca Nelore pastando em primeiro plano" width="1080" height="1446" decoding="async" >
-    <img class="layer" src="assets/img/curral-por-do-sol.jpg" alt="Vaca Nelore iluminada por trás dentro de um curral de madeira ao pôr do sol, com poeira dourada no ar" width="1080" height="1446" decoding="async" >
-    <img class="layer" src="assets/img/vaca-rosto-contraluz.jpg" alt="Retrato de perfil do rosto de uma vaca Nelore contra o sol, com contorno dourado nos pelos" width="1080" height="1446" decoding="async" >
-    <div class="scrim"></div>
-    <div class="dots" aria-label="Capítulos da abertura"></div>
-    <article class="chapter" id="c0">
-      <p class="eyebrow">Programa de melhoramento Nelore</p>
-      <h1>Genética que nasce no <span class="accent">pasto</span>.</h1>
-      <p class="lead">Consanguinidade planejada para quem cria Nelore de verdade.</p>
-      <div class="hint"><i></i>Role para entrar na fazenda</div>
-    </article>
-    <article class="chapter" id="c1">
-      <p class="eyebrow">A matriz</p>
-      <h2>Tudo começa com uma <span class="accent">matriz</span>.</h2>
-      <p class="lead">Rusticidade, fertilidade e carcaça nascem de uma boa escolha, feita a pasto e com histórico conhecido.</p>
-    </article>
-    <article class="chapter" id="c2">
-      <p class="eyebrow">Consanguinidade planejada</p>
-      <h2>Parentesco sob <span class="accent">controle</span>.</h2>
-      <p class="lead">Cada acasalamento é simulado antes de acontecer, e o coeficiente de endogamia (F) fica dentro da meta.</p>
-      <div class="stats">
-        <div><b>6,25%</b><span>F do filho de primos de primeiro grau</span></div>
-        <div><b>12,5%</b><span>F do filho de meios-irmãos</span></div>
-      </div>
-    </article>
-    <article class="chapter" id="c3">
-      <p class="eyebrow">A fazenda</p>
-      <h2>A fazenda é o <span class="accent">laboratório</span>.</h2>
-      <p class="lead">Pesagem, prenhez e desmama viram dados. Os dados voltam ao pasto como decisão de acasalamento.</p>
-    </article>
-    <article class="chapter" id="c4">
-      <p class="eyebrow">Diagnóstico</p>
-      <h2>Conheça o seu <span class="accent">rebanho</span>.</h2>
-      <p class="lead">Informe o perfil da fazenda e veja qual estratégia de consanguinidade planejada se encaixa nela.</p>
-      <p><a class="btn" href="diagnostico.html">Iniciar diagnóstico</a></p>
-    </article>
-  </div>
-</div>
-
-<section class="block">
-  <div class="wrap">
-    <p class="eyebrow">Uma proposta, três ativos</p>
-    <h2>A fazenda já tem o que o programa <span class="accent">precisa</span>.</h2>
-    <p class="lead">A Legado Genética oferece informação para decidir: quem avaliar, quais famílias preservar, como planejar acasalamentos e como monitorar resultados, sem prometer ganho automático.</p>
-    <div class="grid g3" style="margin-top:1.4rem">
-      <article class="card"><span class="tag">Ativo 1</span><h3>Nelore Fumaça</h3><p>Caracterizar geneticamente o fenótipo, mapear famílias e desempenho, e transformar a preferência da proprietária em um programa de seleção estruturado.</p></article>
-      <article class="card"><span class="tag">Ativo 2</span><h3>Nelore convencional</h3><p>Reservatório de diversidade e de linhagens complementares. Não desperdiçamos o patrimônio genético que a proprietária já possui.</p></article>
-      <article class="card"><span class="tag">Ativo 3</span><h3>Fábrica de ração</h3><p>Organizar os dados de nutrição e avaliar eficiência alimentar com método válido. Seu investimento em nutrição também poderá orientar a seleção.</p></article>
+<!-- ============================ ABERTURA ============================ -->
+<section id="abertura" class="hero" aria-label="Abertura">
+  <!-- ENCAIXE: vídeo de fundo, enviado depois. Ex.: <video autoplay muted loop playsinline poster="assets/img/abertura.jpg"> -->
+  <div class="hero-media" id="hero-media" aria-hidden="true"></div>
+  <!-- ENCAIXE: animação de abertura (prompt separado). Renderize dentro de #abertura-slot. -->
+  <div class="hero-slot-abertura" id="abertura-slot" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow rv in">Fazenda leiteira em Uberlândia (MG) · Rebanho PO</p>
+    <h1 class="words">Leite de custo baixo, <span class="accent">genética</span> que se acumula.</h1>
+    <p class="lead rv in">A heterose é um ganho que se aluga; a consanguinidade planejada é um ganho que se acumula.</p>
+    <div class="hero-cta rv in">
+      <a class="btn" href="#simulador">Simular a minha fazenda</a>
+      <a class="btn ghost" href="#debate">Ler o debate</a>
     </div>
-    <div class="note gold">A cor Fumaça é um critério de interesse da cliente, não uma garantia de superioridade genética ou produtiva. A seleção equilibra pelagem, fertilidade, saúde, mérito genético e diversidade.</div>
+    <a class="hint" href="#tese"><i></i>Role para entrar na fazenda</a>
   </div>
 </section>
 
-<section class="block" style="padding-top:0">
+<!-- ============================ TESE ============================ -->
+<section id="tese" class="block">
   <div class="wrap">
-    <p class="eyebrow">O debate técnico</p>
-    <h2>Consanguinidade ou <span class="accent">heterose</span>?</h2>
-    <p class="lead">O cruzamento rende mais quilos no desmame no curto prazo, e este site mostra isso. A pergunta certa é qual caminho serve ao objetivo desta fazenda: preservar e valorizar a linhagem Fumaça com risco controlado.</p>
-    <p><a class="btn ghost" href="consanguinidade-x-heterose.html">Ver o comparador com números</a></p>
+    <p class="eyebrow rv">A tese</p>
+    <h2 class="words">A heterose <span class="accent">se aluga</span>. A consanguinidade planejada <span class="accent">se acumula</span>.</h2>
+    <p class="lead rv">O cruzamento Holandês x Gir entrega ganho já na primeira geração. Esse ganho não fica no rebanho: para mantê-lo, a fazenda precisa cruzar de novo, comprar animais puros e repetir o custo. Nosso lado defende o contrário: um núcleo PO fechado, com parentesco controlado, em que a seleção soma ganho geração após geração.</p>
+    <div class="pair">
+      <article class="card rv"><span class="tag">O que a heterose entrega</span><h3>Ganho real, e cedo</h3><p>Maior ganho no primeiro cruzamento. Pode haver vantagem em fertilidade e em adaptação ao calor quando há Gir na composição <span class="dag">†</span>. Reconhecemos isso.</p></article>
+      <article class="card rv"><span class="tag">O que ela deixa</span><h3>Um ganho que não fica</h3><p>O ganho cai nas gerações seguintes e exige nova compra de animais puros, com custo recorrente e dependência de fornecedor.</p></article>
+      <article class="card rv"><span class="tag">O que a consanguinidade cobra</span><h3>Gestão e controle</h3><p>Genealogia, controle leiteiro e, quando viável, genotipagem. O parentesco precisa de limite (F) e de acompanhamento anual.</p></article>
+    </div>
+    <p class="note gold rv">A pergunta útil não é qual cruzamento dá mais leite no primeiro ano. É o que sobra na fazenda depois do primeiro ciclo, e quanto custa manter isso.</p>
   </div>
 </section>
 
-<section class="band">
+<!-- ============================ REBANHO ============================ -->
+<section id="rebanho" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">O rebanho</p>
+    <h2 class="words">Uberlândia, rebanho PO e <span class="accent">leite</span> como objetivo.</h2>
+    <p class="lead rv">Fazenda em Uberlândia (MG), criação de rebanho PO com foco em produção de leite a custo baixo. A raça PO ainda está a confirmar: escolha abaixo para ver o que muda nas premissas do simulador.</p>
+    <div class="stat-row rv">
+      <div><b data-count="1" data-suffix="%" data-dec="0">0%</b><span>ΔF por geração, referência FAO <span class="dag">†</span></span></div>
+      <div><b data-count="10" data-suffix=" anos" data-dec="0">0 anos</b><span>horizonte das simulações desta página</span></div>
+      <div><b data-count="0" data-dec="0">0</b><span>dados reais da fazenda incluídos até a visita técnica</span></div>
+    </div>
+    <p class="small muted rv">Escolha a raça PO (a conferir):</p>
+    <div class="seg rv" role="group" aria-label="Raça PO">
+      <button type="button" data-breed="holandes" aria-pressed="false">Holandês PO</button>
+      <button type="button" data-breed="gir" aria-pressed="false">Gir leiteiro PO</button>
+      <button type="button" data-breed="girolando" aria-pressed="false">Girolando (a conferir)</button>
+    </div>
+    <div class="breed-text rv" id="raca-texto" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============================ SIMULADOR ============================ -->
+<section id="simulador" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Simulador</p>
+    <h2 class="words">Quanto leite a consanguinidade planejada <span class="accent">acumula</span>?</h2>
+    <p class="lead rv">Todas as premissas são editáveis e ilustrativas. Nenhum valor abaixo é resultado observado em fazenda real. Os valores iniciais servem para começar a conversa, não para decidir.</p>
+    <div class="sim rv">
+      <form class="ctl" onsubmit="return false" aria-label="Premissas do simulador">
+        <label class="field" for="touros"><span class="row"><span>Touros em uso no núcleo</span><output id="o-touros"></output></span><input id="touros" type="range" min="3" max="60" step="1" value="20"></label>
+        <label class="field" for="matrizes"><span class="row"><span>Matrizes em lactação</span><output id="o-matrizes"></output></span><input id="matrizes" type="range" min="30" max="400" step="10" value="100"></label>
+        <label class="field" for="ger"><span class="row"><span>Intervalo entre gerações</span><output id="o-ger"></output></span><input id="ger" type="range" min="3" max="7" step="0.5" value="5"></label>
+        <label class="field" for="g"><span class="row"><span>Ganho genético por seleção <span class="dag">†</span></span><output id="o-g"></output></span><input id="g" type="range" min="0" max="200" step="1" value="60"></label>
+        <label class="field" for="coef">Custo da endogamia por 1% de F (L por lactação)
+          <select id="coef"><option value="0.5">0,5 L (baixo, premissa)</option><option value="1" selected>1,0 L (médio, premissa)</option><option value="2">2,0 L (alto, premissa)</option></select>
+          <span class="hint-txt">Sem fonte de leite conferida ainda <span class="dag">†</span>.</span></label>
+        <label class="field" for="f1"><span class="row"><span>Ganho de heterose do F1 por lactação <span class="dag">†</span></span><output id="o-f1"></output></span><input id="f1" type="range" min="0" max="800" step="10" value="300"></label>
+        <label class="field" for="base"><span class="row"><span>Produção base por lactação <span class="dag">†</span></span><output id="o-base"></output></span><input id="base" type="range" min="1500" max="12000" step="100" value="6500"></label>
+        <label class="field" for="preco"><span class="row"><span>Preço do leite (R$/L) <span class="dag">†</span></span><output id="o-preco"></output></span><input id="preco" type="range" min="1.5" max="4" step="0.01" value="2.5"></label>
+      </form>
+      <div class="out">
+        <div class="kpis">
+          <div class="kpi k-gold"><b id="k-df">–</b><span>ΔF por geração</span></div>
+          <div class="kpi k-gold"><b id="k-f10">–</b><span>F do núcleo em 10 anos</span></div>
+          <div class="kpi k-clay"><b id="k-f1">–</b><span>ganho do F1 por vaca</span></div>
+          <div class="kpi k-moss"><b id="k-po10">–</b><span>núcleo PO no ano 10</span></div>
+          <div class="kpi k-ink"><b id="k-cross">–</b><span>ponto de cruzamento das linhas</span></div>
+        </div>
+        <div class="read" id="read" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="tablewrap rv" style="margin-top:1.6rem">
+      <table style="min-width:44rem">
+        <thead><tr><th>Ano</th><th class="num">L/lactação F1</th><th class="num">L/lactação núcleo PO</th><th class="num">Diferença (L/vaca)</th><th class="num">F do núcleo</th><th class="num">ΔF por geração</th><th class="num">Diferença por ano no rebanho</th></tr></thead>
+        <tbody id="tbl-body"></tbody>
+      </table>
+    </div>
+    <p class="small muted" id="tbl-note"></p>
+    <p class="small muted">Fórmulas: Ne = 4·M·F/(M+F); ΔF = 1/(2·Ne); F(t) = 1 − (1 − ΔF)^t, com t em gerações (anos ÷ intervalo).</p>
+  </div>
+</section>
+
+<!-- ============================ GRÁFICOS ============================ -->
+<section id="graficos" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Gráficos</p>
+    <h2 class="words">Três <span class="accent">curvas</span> para a mesa de decisão.</h2>
+    <p class="lead rv">Os gráficos seguem o simulador. O gráfico do meio se desenha conforme você rola.</p>
+    <div class="chart-grid">
+      <div>
+        <p class="chart-cap rv"><b>1. F do rebanho por geração</b>, com 5, 20 e 60 touros (matrizes do simulador). A linha tracejada mostra ΔF de 1% por geração (FAO <span class="dag">†</span>).</p>
+        <div class="chart rv" id="c1-box"><svg id="c1" viewBox="0 0 640 340" role="img" aria-label="Gráfico do F do rebanho ao longo das gerações para 5, 20 e 60 touros, com a referência de 1% por geração"></svg>
+          <div class="legend"><span><i style="background:var(--clay)"></i>5 touros</span><span><i style="background:var(--gold)"></i>20 touros</span><span><i style="background:var(--moss)"></i>60 touros</span><span><i style="background:var(--ink);height:2px"></i>ΔF de 1% por geração (FAO <span class="dag">†</span>)</span></div>
+        </div>
+      </div>
+      <div class="sticky-track" id="c2-track">
+        <div class="sticky-stage">
+          <p class="chart-cap" style="margin:0"><b>2. Leite por vaca em 10 anos</b>: F1 (ganho de heterose, que depende de seguir cruzando) contra o núcleo PO (ganho de seleção menos endogamia).</p>
+          <div class="chart" id="c2-box"><svg id="c2" viewBox="0 0 640 340" role="img" aria-label="Gráfico da produção por lactação do F1 e do núcleo PO ao longo de 10 anos, com o ponto de cruzamento"></svg>
+            <div class="legend"><span><i style="background:var(--clay)"></i>F1 (cruzamento contínuo)</span><span><i style="background:var(--moss)"></i>Núcleo PO (seleção menos endogamia)</span></div>
+          </div>
+          <div class="year-read" id="c2-year" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <p class="chart-cap rv"><b>3. Custo da endogamia por ano</b>, em R$ no rebanho, com as premissas do simulador.</p>
+        <div class="chart rv" id="c3-box"><svg id="c3" viewBox="0 0 640 340" role="img" aria-label="Barras do custo anual da endogamia em reais no rebanho, de 1 a 10 anos"></svg></div>
+        <p class="small muted rv" id="c3-cap"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PLACAR ============================ -->
+<section id="placar" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Placar por critério</p>
+    <h2 class="words">O placar, critério a critério.</h2>
+    <p class="lead rv">Fazenda leiteira em Uberlândia, rebanho PO, objetivo de leite a custo baixo. Os critérios abaixo são de leite. O placar não é o argumento: os pesos mudam com o objetivo da fazenda.</p>
+    <div class="tablewrap rv"><table style="min-width:46rem">
+      <thead><tr><th>Critério</th><th>Consanguinidade planejada</th><th>Heterose</th><th>Quem ganha</th></tr></thead>
+      <tbody>
+        <tr><td>Produção no curto prazo (primeiro ciclo)</td><td>Ganho menor no início; cresce com a seleção</td><td>Ganho máximo na F1</td><td class="w-h">Heterose</td></tr>
+        <tr><td>Permanência do ganho</td><td>Acumula e é herdável geração após geração</td><td>Cai nas gerações seguintes <span class="dag">†</span></td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Adaptação ao calor e ao carrapato</td><td>Depende da raça PO escolhida</td><td>Gir na composição tende a ajudar <span class="dag">†</span></td><td class="w-h">Heterose</td></tr>
+        <tr><td>Fertilidade e longevidade</td><td>Controlável com F baixo e triagem</td><td>Vantagem possível, a conferir para leite <span class="dag">†</span></td><td class="w-h">Heterose</td></tr>
+        <tr><td>Uniformidade do rebanho</td><td>Uniforme dentro da linhagem; variação entre linhagens</td><td>Uniforme na F1; cai nas gerações seguintes</td><td class="w-t">Depende</td></tr>
+        <tr><td>Dependência de reposição externa</td><td>O núcleo fechado repõe por dentro</td><td>Exige compra de puros para manter o cruzamento</td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Risco biológico</td><td>Recessivos deletérios aparecem se o F não é controlado</td><td>Mascara recessivos em vez de eliminá-los <span class="dag">†</span></td><td class="w-h">Heterose</td></tr>
+        <tr><td>Valor do registro PO e venda de genética</td><td>Preserva o registro e o valor de reprodutores</td><td>O cruzamento dilui o PO</td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Patrimônio genético</td><td>Cria e guarda linhagens próprias</td><td>Usa linhagens de terceiros</td><td class="w-c">Consanguinidade</td></tr>
+        <tr><td>Custo de gestão</td><td>Exige genealogia, controle leiteiro e genotipagem</td><td>Plano simples, mas com compra recorrente</td><td class="w-t">Depende</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note gold rv">Placar: consanguinidade leva 4 critérios, heterose leva 4, e 2 ficam em aberto. Heterose ganha no curto prazo, em fertilidade e em adaptação. Consanguinidade ganha no que se acumula.</p>
+  </div>
+</section>
+
+<!-- ============================ LACUNAS ============================ -->
+<section id="lacunas" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Lacunas da heterose</p>
+    <h2 class="words">O que o cruzamento <span class="accent">deixa descoberto</span>.</h2>
+    <p class="lead rv">A pergunta é o que fica sem resposta quando o cruzamento acaba. Cada lacuna abaixo tem uma resposta do núcleo PO, desde que o F seja controlado.</p>
+    <div class="tablewrap rv"><table style="min-width:44rem">
+      <thead><tr><th>Lacuna da heterose</th><th>Por que pesa na fazenda</th><th>Resposta da consanguinidade planejada</th></tr></thead>
+      <tbody>
+        <tr><td>O ganho é máximo na F1 e cai depois <span class="dag">†</span></td><td>Cada geração de cruzamento precisa de nova dose de heterose. Sem ela, o ganho some.</td><td>O ganho de seleção se soma, desde que o F seja controlado e medido.</td></tr>
+        <tr><td>Exige reposição constante de raças puras</td><td>Compra recorrente de touros e matrizes, com custo e dependência de fornecedor.</td><td>O núcleo fechado repõe por dentro. Compra só para diversidade, quando necessário.</td></tr>
+        <tr><td>Mais variação entre animais</td><td>Lotes mais desiguais exigem mais manejo e tornam o planejamento de ordenha mais difícil.</td><td>Uniformidade dentro da linhagem. A seleção reduz a variação indesejada ao longo das gerações.</td></tr>
+        <tr><td>A heterose não é selecionável</td><td>O ganho do cruzamento depende do par escolhido, não de uma decisão de seleção sobre o animal.</td><td>A seleção escolhe os reprodutores pelo mérito, com registros e genealogia.</td></tr>
+        <tr><td>Cruzar dilui linhagens PO e o valor do registro</td><td>Perde-se a venda de reprodutores registrados e a valorização do plantel.</td><td>Preserva as linhagens e o valor de venda de reprodutores registrados.</td></tr>
+        <tr><td>A heterose mascara recessivos deletérios em vez de eliminá-los (purga parcial e debatida <span class="dag">†</span>)</td><td>Os riscos ficam escondidos no rebanho até aparecerem em um nascimento ou em uma doença.</td><td>Triagem de haplótipos e F controlado expõem o risco. Quando há dados, ele pode ser eliminado.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ============================ DEBATE ============================ -->
+<section id="debate" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">O debate</p>
+    <h2 class="words">Consanguinidade planejada ou <span class="accent">heterose</span>?</h2>
+    <p class="lead rv">Um debate de dois lados. A seguir, a abertura, os ataques prováveis com as respostas, o que concedemos e o fechamento.</p>
+    <div class="script rv"><b>Abertura (30 s)</b>Vamos discutir uma pergunta simples: o que fica na fazenda depois que o primeiro cruzamento acaba? O cruzamento dá ganho imediato e real. Nós defendemos um núcleo PO em que o ganho se acumula, com parentesco controlado e medido. Concordamos no que o cruzamento entrega. Discordamos do que ele deixa para a próxima geração.</div>
+
+    <h3 style="margin-top:1.6rem">Ataques prováveis e respostas</h3>
+    <details class="qa rv"><summary>"Consanguinidade derruba o leite."</summary><p><b>Resposta:</b> Derruba, sim, por ponto de F. A pergunta é quanto, e se o ganho de seleção compensa. O simulador mostra a conta com as suas premissas. Sem o controle leiteiro da fazenda, o número é ilustrativo.</p></details>
+    <details class="qa rv"><summary>"A F1 dá mais leite e aguenta o calor."</summary><p><b>Resposta:</b> No primeiro cruzamento, a F1 costuma dar mais leite e pode tolerar mais calor que o Holandês puro <span class="dag">†</span>. Concedemos isso. O que a conta não cobre é o segundo ciclo: a reposição e o valor do registro.</p></details>
+    <details class="qa rv"><summary>"O Holandês puro sofre no calor."</summary><p><b>Resposta:</b> Concordamos que o Holandês é mais sensível ao calor <span class="dag">†</span>. Por isso a raça PO é um ponto a confirmar. Se a escolha for Holandês, o manejo de calor entra no custo fixo, com ou sem cruzamento.</p></details>
+    <details class="qa rv"><summary>"Controlar parentesco é caro."</summary><p><b>Resposta:</b> Custa genealogia, controle leiteiro, genotipagem e tempo. Comparamos esse custo com a reposição recorrente da heterose e com o valor do PO. As duas linhas estão no simulador e no gráfico 3.</p></details>
+
+    <h3 style="margin-top:1.6rem">O que concedemos</h3>
+    <ul class="concede rv">
+      <li>A heterose ganha no curto prazo, em produção do primeiro cruzamento.</li>
+      <li>A F1 é mais simples de produzir e costuma ter vantagens de fertilidade e de adaptação <span class="dag">†</span>.</li>
+      <li>Sem dados de controle leiteiro da fazenda, nenhum número desta página vale como previsão.</li>
+    </ul>
+
+    <div class="script rv" style="margin-top:1.4rem"><b>Fechamento (20 s)</b>A heterose é um ganho que se aluga. Na nossa proposta, o que a fazenda ganha fica no rebanho, medido em litros e em registro. Se os números do controle leiteiro da sua fazenda mostrarem outra coisa, o programa muda.</div>
+  </div>
+</section>
+
+<!-- ============================ PROPOSTA ============================ -->
+<section id="proposta" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Proposta</p>
+    <h2 class="words">Núcleo PO como programa principal. Cruzamento como <span class="accent">exceção</span>.</h2>
+    <div class="grid g3">
+      <article class="card hl rv"><span class="tag">Programa principal</span><h3>Núcleo PO com consanguinidade planejada</h3><p>Limite de F definido pelo zootecnista, número de touros calculado pelo tamanho efetivo (Ne) e controle leiteiro por vaca e por lactação.</p></article>
+      <article class="card rv"><span class="tag">Condicional</span><h3>Lote comercial separado</h3><p>Cruzamento só se o zootecnista aprovar, em lote separado, medido com as mesmas ordenhas e o mesmo controle leiteiro do núcleo.</p></article>
+      <article class="card rv"><span class="tag">Quando a heterose vence</span><h3>Objetivo de curto prazo</h3><p>Se o único objetivo for litro no primeiro ciclo e não houver interesse em PO nem em venda de reprodutores, o cruzamento pode ser a escolha.</p></article>
+    </div>
+    <ol class="timeline rv" style="margin-top:2rem">
+      <li><span class="when">Etapa 1</span><h3>Visita técnica</h3><p>Raça PO, rebanho, custos, manejo e objetivo da fazenda.</p></li>
+      <li><span class="when">Etapa 2</span><h3>Controle leiteiro e genealogia</h3><p>Produção por vaca e por lactação, pai e mãe dos animais em uso.</p></li>
+      <li><span class="when">Etapa 3</span><h3>Genotipagem por amostragem</h3><p>Se o orçamento permitir. Mede o parentesco com mais precisão.</p></li>
+      <li><span class="when">Etapa 4</span><h3>Simulação com dados reais</h3><p>Substitui as premissas ilustrativas pelos números da fazenda.</p></li>
+      <li><span class="when">Etapa 5</span><h3>Plano de acasalamentos</h3><p>Teto de F, número de touros e revisão anual com o zootecnista.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ DIAGNÓSTICO ============================ -->
+<section id="diagnostico" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Diagnóstico</p>
+    <h2 class="words">Qual caminho serve à sua <span class="accent">fazenda</span>?</h2>
+    <p class="lead rv">Responda sobre o objetivo, o rebanho e os dados que você tem. O diagnóstico calcula o ΔF, indica o caminho, aponta alertas e diz o que falta coletar.</p>
+    <div class="note rv">Triagem orientativa por regras. Não substitui o zootecnista nem o geneticista. Nenhum dado é enviado a ninguém: o resultado fica na sua tela.</div>
+    <div class="diag">
+      <form id="diag-form" novalidate>
+        <fieldset><legend>Objetivo principal</legend><div class="radios">
+          <label><input type="radio" name="objetivo" value="leite" checked> Leite a custo baixo (núcleo PO)</label>
+          <label><input type="radio" name="objetivo" value="reprodutores"> Vender reprodutores PO registrados</label>
+          <label><input type="radio" name="objetivo" value="comercial"> Leite comercial no curto prazo</label>
+        </div></fieldset>
+        <label class="field" for="d-vacas">Vacas em lactação<input id="d-vacas" name="vacas" type="number" inputmode="numeric" min="1" max="20000" value="120"></label>
+        <label class="field" for="d-touros">Touros em uso<input id="d-touros" name="touros" type="number" inputmode="numeric" min="1" max="500" value="6"></label>
+        <label class="field" for="d-gen">Genealogia (pai e mãe)<select id="d-gen" name="genealogia"><option value="completa">Completa</option><option value="parcial" selected>Parcial</option><option value="nenhuma">Não há</option></select></label>
+        <label class="field" for="d-geno">Genotipagem<select id="d-geno" name="genotipagem"><option value="sim">Sim</option><option value="parcial">Parcial</option><option value="nao" selected>Não</option></select></label>
+        <label class="field" for="d-ctrl">Controle leiteiro por vaca<select id="d-ctrl" name="controle"><option value="sim">Sim</option><option value="parcial" selected>Parcial</option><option value="nao">Não</option></select></label>
+        <label class="field" for="d-fmed">F médio já conhecido (%), se houver<input id="d-fmed" name="fmedio" type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="Deixe em branco se não souber"></label>
+        <div class="actions"><button class="btn" type="submit">Gerar diagnóstico</button><button class="btn ghost" type="button" id="b-example">Ver exemplo</button></div>
+      </form>
+      <div id="result" class="result" aria-live="polite">
+        <div class="panelbox"><h3>O resultado aparece aqui</h3><p class="muted">Preencha o perfil e toque em "Gerar diagnóstico". Você recebe a estratégia, o ΔF, o F nas próximas gerações, os alertas e a lista do que falta coletar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FONTES ============================ -->
+<section id="fontes" class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Fontes e limites</p>
+    <h2 class="words">De onde vêm os <span class="accent">números</span>.</h2>
+    <p class="lead rv">Esta página é uma simulação acadêmica. Os valores de produção de leite e de preço são premissas, e cada uma está marcada com <span class="dag">†</span> (a conferir). Os dados de corte abaixo servem só como referência de método.</p>
+    <div class="note rv"><b>Marcadores.</b> <span class="dag">†</span> a conferir no texto original. <span class="ver">‡</span> conferido no texto completo. Nenhum número de leite está marcado como fato nesta página.</div>
+
+    <p class="src-group">Leite e geral (a conferir)</p>
+    <div class="rv">
+      <p class="src">FAO. Estratégias de melhoramento e taxa de endogamia. Referência para o limite de 1% de ΔF por geração. <span class="dag">†</span> <a href="https://www.fao.org/4/x5538e/x5538e09.htm">Texto</a></p>
+      <p class="src">Leroy, G. (2014). Meta-análise de depressão endogâmica em animais de produção. <span class="dag">†</span> <a href="https://hal.archives-ouvertes.fr/hal-01193843">Texto</a></p>
+      <p class="src">Doekes, H. P. et al. (2021). "How depressing is inbreeding?", Genes. <span class="dag">†</span> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8234567/">Texto</a></p>
+      <p class="src"><b>A buscar nesta versão:</b> literatura de leite sobre depressão endogâmica por 1% de F em Holandês e Gir, heterose de produção de leite no Girolando e preço do leite (ex.: Cepea/Esalq). Ainda não localizadas; por isso todas as premissas de leite estão marcadas.</p>
+    </div>
+
+    <p class="src-group">Corte (referência de método, não da fazenda)</p>
+    <div class="rv">
+      <p class="src"><span class="tagc">Gado de corte, Nelore</span> Pereira, R. J. et al. (2015). Depressão por endogamia em características reprodutivas e de crescimento na raça Nelore. <span class="ver">‡</span> <a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1029206/1/AVEK.pdf">Texto</a></p>
+      <p class="src"><span class="tagc">Gado de corte</span> Burrow (1993), revisão de depressão endogâmica em gado de corte. <span class="dag">†</span></p>
+      <p class="src"><span class="tagc">Gado de corte</span> Alencar, M. M. et al. Efeitos aditivos e heteróticos em bezerros Canchim x Nelore e Marchigiana x Nelore. Embrapa Pecuária Sudeste. <span class="ver">‡</span> <a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/42654/1/EstimativasEfeitosAditivosHeteroticos-OK.pdf">Texto</a></p>
+      <p class="src"><span class="tagc">Gado de corte</span> Teixeira, B. B. M. et al. (2012). Composição racial e heterose na carcaça de novilhos. <span class="ver">‡</span> <a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/936212/3/Teixeiraetal2012.pdf">Texto</a></p>
+      <p class="src"><span class="tagc">Gado de corte</span> Embrapa. Circular Técnica 48, tristeza parasitária bovina. <span class="ver">‡</span> <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1113867/1/CirTec48.pdf">Texto</a></p>
+      <p class="src"><span class="tagc">Gado de corte, Nelore</span> Mota et al. (2024), BMC Genomics 25:738, endogamia em Nelore de núcleo fechado. <span class="dag">†</span> <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10641-3">Texto</a></p>
+      <p class="src"><span class="tagc">Gado de corte, Nelore</span> Trigo et al. (2021), ASIP e pelagem em Nelore, Genet. Sel. Evol. 53:40. <span class="dag">†</span> <a href="https://doi.org/10.1186/s12711-021-00633-2">Texto</a></p>
+      <p class="src"><span class="tagc">Gado de corte, zebu x taurino</span> Koger (1980) e Cundiff et al. (1994), via UF/IFAS. <span class="dag">†</span> <a href="https://journals.flvc.org/edis/article/download/116132/114304/167171">Texto</a></p>
+    </div>
+
+    <p class="src-group">Anexo e limites</p>
+    <div class="rv">
+      <p class="src">Anexo analítico (Word, editável), de corte e de método. <a href="assets/docs/Legado_Genetica_Anexo_Analitico_Consanguinidade_x_Heterose.docx">Baixar .docx</a></p>
+      <p class="src">Anexo analítico (PDF), de corte e de método. <a href="assets/docs/Legado_Genetica_Anexo_Analitico_Consanguinidade_x_Heterose.pdf">Baixar .pdf</a></p>
+      <p class="src"><b>Dados reais da fazenda</b> (rebanho, genealogia, controle leiteiro, custos e preço): só com a visita técnica. Até lá, todos os números desta página são premissas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Chamada final">
   <div class="wrap">
     <h2>Preservamos a origem. <span class="accent">Planejamos o futuro.</span></h2>
-    <a class="btn" href="diagnostico.html">Iniciar diagnóstico</a>
+    <a class="btn" href="#simulador">Simular a minha fazenda</a>
   </div>
 </section>
-
 </main>
+
 <footer class="site-footer">
   <div class="wrap">
-    <a class="brand" href="index.html">Legado <i>Genética</i></a>
-    <nav class="foot-nav" aria-label="Navegação do rodapé"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="jornada.html">Jornada</a><a href="consanguinidade-x-heterose.html">Consanguinidade x Heterose</a><a href="diagnostico.html">Diagnóstico</a><a href="legado-connect.html">Legado Connect</a><a href="fontes.html">Fontes</a></nav>
-    <p>Projeto acadêmico de simulação (APS de Agronomia). Empresa, produtos e dados de demonstração.</p>
-    <p>Imagens geradas por IA para fins ilustrativos. Não representam animais ou instalações reais.</p>
-    <p>Preservamos a origem. Planejamos o futuro.</p>
+    <a class="brand" href="#abertura">Berdinazi <i>&amp;</i> Mezenga</a>
+    <nav class="foot-nav" aria-label="Navegação do rodapé"><a href="#tese">Tese</a><a href="#rebanho">Rebanho</a><a href="#simulador">Simulador</a><a href="#graficos">Gráficos</a><a href="#placar">Placar</a><a href="#lacunas">Lacunas</a><a href="#debate">Debate</a><a href="#proposta">Proposta</a><a href="#diagnostico">Diagnóstico</a><a href="#fontes">Fontes</a></nav>
+    <p>Projeto acadêmico de simulação (APS de Agronomia). Empresa, rebanho e números de demonstração.</p>
+    <p>Premissas de leite e de preço são ilustrativas (<span class="dag">†</span>). Nada aqui é resultado observado em fazenda real.</p>
   </div>
 </footer>
-<script src="assets/js/common.js" defer></script>
-<script src="assets/js/story.js" defer></script>
-
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
