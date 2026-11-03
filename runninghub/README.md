@@ -1,6 +1,6 @@
 # Workflows RunningHub — imagem/vídeo com modelo de referência + sites
 
-Um workflow completo (00) e cinco workflows separados (01 a 05) em ComfyUI (formato API) feitos só com **nodes nativos do ComfyUI**, para evitar custom nodes que talvez não existam no RunningHub.
+Um workflow completo (00) e cinco workflows separados (01 a 05) em ComfyUI (formato API) feitos com **nodes nativos do ComfyUI**, para evitar custom nodes que talvez não existam no RunningHub. A única exceção é o `DWPreprocessor` (pacote `comfyui_controlnet_aux`), usado nos workflows 00 e 05.
 
 | Arquivo | O que faz |
 | --- | --- |
